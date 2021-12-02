@@ -1,3 +1,4 @@
+export {};
 const input: string = `195
 197
 201
