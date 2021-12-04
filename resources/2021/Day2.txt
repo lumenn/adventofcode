@@ -1,6 +1,4 @@
-export {};
-
-const input: string = `forward 3
+forward 3
 down 9
 forward 6
 down 3
@@ -999,46 +997,4 @@ forward 6
 forward 8
 forward 9
 forward 2
-forward 5`;
-
-
-// part 1
-let x: number = 0;
-let y: number = 0;
-
-input.split(/\n/g).forEach((v) => {
-  let line: string[] = v.split(/ /g);
-  if (line[0] === 'down') {
-    y += +line[1]
-  }
-  if (line[0] === 'up') {
-    y -= +line[1]
-  }
-  if (line[0] === 'forward') {
-    x += +line[1]
-  }
-})
-
-console.log(`Part 1 - X: ${x}, Y: ${y}, *: ${x * y}`)
-
-// part 2
-
-let aim: number = 0;
-x = 0;
-y = 0;
-
-input.split(/\n/g).forEach((v) => {
-  let line: string[] = v.split(/ /g);
-  if (line[0] === 'down') {
-    aim += +line[1]
-  }
-  if (line[0] === 'up') {
-    aim -= +line[1]
-  }
-  if (line[0] === 'forward') {
-    x += +line[1]
-    y += aim * +line[1]
-  }
-})
-
-console.log(`Part 2 - X: ${x}, Y: ${y}, *: ${x * y}`)
+forward 5
