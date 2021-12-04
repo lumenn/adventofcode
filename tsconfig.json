@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
-    "lib": ["ES2015", "ES2016", "DOM"],
-    "target": "ES5",
-    "module": "CommonJS",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["ES2021"],
+    "target": "ES2021",
+    "module": "ES2020",
+    "moduleResolution": "node",
     "outDir": "build",
-    "sourceMap": true
+    "sourceMap": true,
   }
 }
