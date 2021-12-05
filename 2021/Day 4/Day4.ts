@@ -138,12 +138,15 @@ function countPoints(card: bingoCard): number {
   return points;
 }
 
+
+// part 1
 let { winningCard, winningNumber } = playBingo(bingoNumbers, cards);
 let points: number = countPoints(winningCard);
 
-console.log(`Winning number: ${winningNumber}, card points: ${points}, final score: ${winningNumber * points}`)
+console.log(`Winning number part 1: ${winningNumber}, card points: ${points}, final score: ${winningNumber * points}`)
 
+// part 2
 let { winningCard: w, winningNumber: n } = playBingoToLastCard(bingoNumbers, cards);
 points = countPoints(w)
 
-console.log(`Winning number: ${n}, card points: ${points}, final score: ${n * points}`);
+console.log(`Winning number part 2: ${n}, card points: ${points}, final score: ${n * points}`);
